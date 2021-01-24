@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+<style>
+div.gallery {
+  border: 2px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 2px solid #777;
+}
+
+div.gallery img {
+  width: 80%;
+  height: auto;
+}
+
+div.desc {
+  padding: 13px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+.button1 {background-color: #4CAF50;}
+</style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+<body>
+
+<h2>Responsive Navigation Bar with Icons</h2>
+
+
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+ <a href="{% url 'contact' %}" class="ml-2">Contact</a>
+  <a href="{% url 'login' %}" >Login</a>
+</div>
+
+</body>
+</html>
+</head>
+<body>
+<form action="{% url 'cost' %}" method="post">
+<h3>Resize the browser window to see the effect.</h3>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="{% url 'cost' %}">
+      <img src="{% static 'images/ac/ac1.jpeg' %}" alt="Cinque Terre" width="400" height="400">
+    <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost'%}">
+      <img src="{% static 'images/ac/ac1.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="{% url 'cost' %}">
+      <img src="{% static 'images/ac/ac1.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="{% url 'cost' %}">
+      <img src="{% static 'images/ac/ac1.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/bpmonitor/bpmonitor1.jpeg' %}" alt="Cinque Terre" width="400" height="400">
+    <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/bpmonitor/bpmonitor2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/bpmonitor/bpmonitor3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/bpmonitor/bpmonitor4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cemera/cemera1.jpeg' %}" alt="Cinque Terre" width="400" height="400">
+    <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cemera/cemera2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cemera/cemera3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cemera/cemera4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cemeralens/cemeralens1.jpeg' %}" alt="Cinque Terre" width="400" height="400">
+    <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cemeralens/cemeralens2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cemeralens/cemeralens3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cemeralens/cemeralens4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="{% url 'cost' %}">
+      <img src="{% static 'images/cookers/cooker1.jpeg' %}" alt="Cinque Terre" width="400" height="400">
+    <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cookers/cooker2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cookers/cooker3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/cookers/cooker4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/headphones/headphone1.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/headphones/headphone2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/headphones/headphone3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/headphones/headphone4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/homespeakers/speaker1.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/homespeakers/speaker2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/homespeakers/speaker3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/homespeakers/speaker4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/laptops/laptop1.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/laptops/laptop2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/laptops/laptop3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/laptops/laptop4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/mobileholders/mobileholder1.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a  href="{% url 'cost' %}">
+      <img src="{% static 'images/mobileholders/mobileholder2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="{% url 'cost' %}">
+      <img src="{% static 'images/mobileholders/mobileholder3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/mobileholders/mobileholder4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/mouse/mouse1.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/mouse/mouse2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/mouse/mouse3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/mouse/mouse4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/powerbank/powerbank1.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/powerbank/powerbank2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/powerbank/powerbank3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/powerbank/powerbank4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br><br><br>
+</div>
+
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/printer/printer1.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/printer/printer2.jpeg' %}" alt="Forest" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/printer/printer3.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/printer/printer4.jpeg' %}" >
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/routers/router1.jpeg' %}"  alt="Northern Lights"   width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/routers/router2.jpeg' %}" alt="Northern Lights" width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/routers/router3.jpeg' %}" alt="Northern Lights" width="300" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/routers/router4.jpeg' %}"  width="400" height="400">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br><br><br>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/tvunit/tv1.jpeg' %}" width="100" height="100">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/tvunit/tv2.jpeg' %}"  width="80" height="100">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/tvunit/tv3.jpeg' %}" width="100" height="100">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/tvunit/tv4.jpeg' %}"  width="30" height="40">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/watches/watch1.jpeg' %}" width="100" height="100">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/watches/watch2.jpeg' %}"  style=" width:80 height:100">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/watches/watch3.jpeg' %}" width="100" height="50">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{% url 'cost' %}">
+      <img src="{% static 'images/watches/watch4.jpeg' %}"  width="30" height="40">
+      <button class=" button button1" type="button" >add to cart</button>
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div><br><br><br>
+</div>
+</form>
+</body>
+</html>
+
+
